@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web developer/designer, Software developer. Here is an entire website about me.">
+    <meta name="author" content="Saumil Soni">
+    <meta name="keywords" content="Saumil,Soni,Saumil Soni">
+    <title>TIDES@CSUN</title>
+	
+	<!-- core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+	<link href="../css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+	<link rel="shortcut icon" type="image/png" href="../images/ico/csun.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body class="homepage">
+	<noscript><div class="alert alert-warning">It looks like JavaScript is disabled on your browser, to better see this website it is
+	recommended that you enable it.</div></noscript>
+	
+    <div class="modal large fade" tabindex="-1" role="dialog" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<center>
+						<h4 class="modal-title">Guess The Genre </h4>
+						<h4 class="modal-title">Programming Module</h4>
+					</center>
+				</div>
+				<div class="modal-body">
+					<p>Create a game that plays a random song and asks the user to guess the genre of that song. Then when the user guesses the genre, the 
+					game should play another song from the same genre. Otherwise, the game should ask the player to guess again.</p>
+					<p>You are given a list of songs of various world music genres. There are two songs from each genre. The skeleton code has a genres[18][3]
+					two dimensional array where the 18 represents 18 different music genres. The size 3 array contains the genre name and two songs associated
+					with the genre. </p>
+					<p>Use the <i>playFile(filename)</i> method from the SoundManager class to play a song, and <i>stopFile(filename)</i> to stop the song.</p>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
+	<script src="../js/image-resize.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#myModal').modal({
+				backdrop: 'static',
+				keyboard: false
+			});
+		});
+	</script>
+	
+</body>
+</html>

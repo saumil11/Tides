@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning To Code By Making Music</title>
+<p id="title" align = center >Learning To Code By Making Music</p>
+<p id="text" align = center >Guess The Music</p>
+
+	
+<style>
+body{
+background-image:url('background.jpg');
+background-repeat: no-repeat;
+background-position: center 1%;
+background-size: 60%;
+
+}
+div{
+margin-top:5%;
+}
+
+#title{
+font-size: 36px;
+}
+
+#text{
+font-size: 20px;
+}
+
+
+</style>
+</head>
+
+<body onload="init()">
+
+	<p align=center style = "margin-top:3%;" id="tip" >Click the generate note button. </p> 
+	<div align = center >
+	<button id="generate">Generate Note</button></br></br>
+	<input type="text" id="field" style="display:none;"><br>
+	<button id="submit" style="display:none;">Answer</button>
+	<p id="feedback">
+	<br></div>
+
+
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/Proxy.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/definePropertySupported.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script>
+	var soundInstance;  // the soundInstance returned by Sound when we create or play a src
+	var array;
+	var note;
+	var text;
+	window.addEventListener("load", init, false);
+	$("#generate").click(function() {
+			playRandomNote();
+	});
+	$("#submit").click(function() {
+		if(text.value > note)
+			document.getElementById("feedback").innerHTML = "Your answer is high";
+		else if(text.value == note)
+			document.getElementById("feedback").innerHTML ="Good Job!";
+		else
+			document.getElementById("feedback").innerHTML = "Your answer is low";
+	});
+	function init() {
+			createjs.Sound.initializeDefaultPlugins();
+            // Create a single item to load.
+            var assetsPath = "assets/";
+			c = "C.ogg";
+			d = "D.ogg";
+			e = "E.ogg";
+			f = "F.ogg";
+			g = "G.ogg";
+			a = "A.ogg";
+			b = "B.ogg";
+            createjs.Sound.registerSound(a);  // register sound, which preloads by default*/
+			createjs.Sound.registerSound(b);  
+			createjs.Sound.registerSound(c);
+			createjs.Sound.registerSound(d);   			
+			createjs.Sound.registerSound(e); 
+			createjs.Sound.registerSound(f);
+			createjs.Sound.registerSound(g);
+			array = [c,d,e,f,g,a,b];
+			text = document.getElementById("field");
+	}
+	
+	function playRandomNote(){
+	note = Math.floor(Math.random()*7);
+	createjs.Sound.play(array[note]);
+	note++;
+	document.getElementById("tip").innerHTML ="Try to guess the note by typing a number a number between 1 and 7 and clicking Answer.<br> Refer to the table at the bottom to see the numerical representation of the music notes.";
+	document.getElementById("field").style.display = "block";
+	document.getElementById("submit").style.display = "block";
+	}
+
+	
+	
+		</script>
+</body>
+</html>

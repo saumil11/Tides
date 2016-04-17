@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>Programming Module</title>
+          <LINK REL=StyleSheet HREF="../style.css" TYPE="text/css" MEDIA=screen>
+
+ <style>
+ p{width :90%;}
+ </style>
+ <script type="text/javascript" src="../SoundJS-master/src/createjs/utils/Proxy.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/definePropertySupported.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script>
+	var interval;
+	
+	function init() {
+			createjs.Sound.initializeDefaultPlugins();
+            // Create a single item to load.
+            var assetsPath = "assets/";
+			c = "C.ogg";
+			d = "D.ogg";
+			e = "E.ogg";
+			f = "F.ogg";
+			g = "G.ogg";
+			a = "A.ogg";
+			b = "B.ogg";
+            createjs.Sound.registerSound(a);  // register sound, which preloads by default*/
+			createjs.Sound.registerSound(b);  
+			createjs.Sound.registerSound(c);
+			createjs.Sound.registerSound(d);   			
+			createjs.Sound.registerSound(e); 
+			createjs.Sound.registerSound(f);
+			createjs.Sound.registerSound(g);
+			array = [c,d,e,f,g,a,b];
+			interval = setInterval(play,5000);
+			}
+			function play(){
+				note = Math.floor(Math.random()*7);
+				createjs.Sound.play(array[note]);
+				note++;
+				document.getElementById("note").innerHTML = "Playing note "+array[note-1].charAt(0)+" represented with integer "+note;
+				document.getElementById("stop").style.display = "block";
+				$("#stop").click(function() {
+					stopInt();
+				});
+				$("#start").click(function() {
+					location.reload();
+				});
+			}
+			function stopInt(){
+				clearInterval(interval);
+				document.getElementById("note").innerHTML = "";
+				document.getElementById("stop").style.display = "none";
+				document.getElementById("start").style.display = "block";
+
+
+			}
+	</script>
+</head>
+<body onload = "init()">
+<div align="right"></div>
+<div align="center">
+<h2>Guess The Note - Selection Statements<br /> 
+  Programming Module
+</h2>
+<p>&nbsp;</p>
+</div>
+
+<div style="margin-left:3%;">
+<p>Create a program that  plays a random note using the <a id = "code">generateNote()</a> method and then asks the user to guess the note by entering a number between 1-7. The program should tell the user whether the answer was correct, higher, or lower than the played note.
+</p>
+<p>The SoundManager class has a method called <a id = "code">generateNote()</a> that plays a random piano note and returns an integer value between 1-7  <br> Here's the integer representation of the music notes:<br>
+</p>
+</div>
+<div align = "center" ><img src="table.jpg"></div>
+<div align = "center">
+<h2  id="note" style="margin-top:10%;"></h2>
+<button id="stop" style="display:none;">Stop</button>
+<button id="start" style="display:none;">Start</button></div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning To Code By Making Music</title>
+<p id="title" align = center style="font-size:24px">Learning To Code By Making Music</p>
+<p id="text" align = center style="font-size:20px; margin-top:-1.5%;">Using user input to play a scale</p>
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+
+<!-- Note: All SoundJS classes are listed here: -->
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/Proxy.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/definePropertySupported.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script>
+        var kick;            // the audio src we are trying to play
+        var soundInstance;  // the soundInstance returned by Sound when we create or play a src
+        var displayStatus;  // the HTML element we use to display messages to the user
+		
+        function init() {
+
+			createjs.Sound.initializeDefaultPlugins();
+            // Create a single item to load.
+            var assetsPath = "assets2/";
+			la = assetsPath + "la.mp3";
+			java = assetsPath + "java.mp3";
+			createjs.Sound.registerSound(la);  // register sound, which preloads by default*/
+			createjs.Sound.registerSound(java);  
+			
+            word = document.getElementById("field");
+			var play = document.getElementById("speak");
+			play.addEventListener("click", playScale, false);		
+        }
+		
+		function playScale(){
+		if(word.value=="la")
+			createjs.Sound.play(la);	
+		if(word.value=="java")
+			createjs.Sound.play(java);	
+
+		}	
+    </script>
+</head>
+
+<body onload="init()" style="background-image:url('background.jpg');background-repeat: no-repeat;
+background-size: cover;background-position: 0% -50%; ">
+
+	<div align = center >
+	<div style="margin-left:30%; margin-top:30%;">
+	<p align=center >Type a word in the text field and press the play Button. (In this demo, only "la" or "java" are acceptable inputs)</p>
+	<input id="field" type="text" size="8"  width="100%">
+	<input type="image" src="assets/button.png" id="speak" height="40px" width="40px" align="center"></div>
+	<br></div>
+
+	<!-- Note: All SoundJS classes are listed here: -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+     http://code.createjs.com -->
+
+</body>
+</html>

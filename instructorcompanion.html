@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="The TIDES@CSUN project is led by an interdisciplinary team working to create lab modules, programming assignments
+		and lecture examples for use in introductory programming courses">
+		<meta name="keywords" content="TIDES,CSUN,California State University,California State University Northridge,CSU Northridge">
+		<title>TIDES@CSUN</title>
+
+		<!-- core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/prettyPhoto.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+		<link rel="shortcut icon" type="image/png" href="images/ico/csun.ico" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+		
+	</head>
+	<body>
+		<header id="header" style="position:fixed;margin-bottom:100px; z-index:999; width:100%">
+			<nav class="navbar navbar-inverse" role="banner">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html" style="font-size:50px;"><!--<img src="images/csun.gif" alt="logo">-->TIDES@CSUN</a>
+					</div>
+
+					<div class="collapse navbar-collapse navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html"><b>Home</b></a></li>
+							<li><a href="news.html"><b>News</b></a></li>
+							<li class="dropdown active" id="projectList">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Modules</b> <i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="programmingmodules.html">Programming Modules</a></li>
+									<li><a href="visualmodules.html">Modified Visual Modules</a></li>
+									<li><a href="instructorcompanion.html">Instructor Companion</a></li>
+									<li><a href="webresources.html">Web Resources</a></li>
+								</ul>
+							</li>
+							<li><a href="people.html" id="homeLink"><b>People</b></a></li>
+						</ul>
+					</div>
+				</div><!--/.container-->
+			</nav><!--/nav-->
+		</header><!--/header-->
+		<section style="min-height:100%">
+			<p class="col-md-12">&nbsp;</p><p class="col-md-12">&nbsp;</p>
+			<div class="container">
+				<div class="col-md-12 wow fadeInDown">
+					<p>Explore the various modules directed at faculty and course instructors, addressing culturally-competent instruction in a programming 
+					class.</p>
+					<br />
+					<div class="col-md-12">
+						<label id="dropdownLabel">Select a module you want to view:</label><br />
+						<select class="form-control" id="selection" style="width:50%;">
+							<option value="nms" selected>No Module Selected</option>
+							<option value="am">All Modules</option>
+							<option value="mg">Microaggressions</option>
+							<option value="st">Stereotype Threat</option>
+							<option value="fc">Feedback Culture</option>
+							<option value="wcri">Why Culturally-Responsive Instruction</option>
+							<option value="ccc">Caring Community in Classroom</option>
+							<option value="crcr">Culturally Responsive Conflict Resolution</option>
+							<option value="csl">Community Service Learning</option>
+							<option value="bbma">BaFa BaFa Multicultural Activity</option>
+							<option value="wp">Women and Programming</option>
+							<option value="smpt">Some More Practical Tips</option>
+						</select>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden wcri">
+					<!--<div class="col-md-3">
+						<center>
+							<img src="images/instructorcompanion/microaggressions.jpg" style="height:180px;width:200px;" />
+						</center>
+					</div>-->
+					<div class="col-md-12">
+						<p><b>Why Culturally-Responsive Instruction</b></p>
+						<p>
+							Culturally-responsive instruction is essential in ensuring students in STEM reflect the general population. No matter how talented
+							students are, if they do not feel that their gender or ethnic group is welcome or belongs in that major, they may not pursue a
+							career in STEM. Training a diverse group of students offers the opportunity for workforce diversity, which has social and
+							financial benefits.
+						</p>
+						<p>
+							Gender-diverse and ethnically-diverse companies are more likely to outperform companies that are less diverse<br />
+							<a href="http://www.mckinsey.com/business-functions/organization/our-insights/why-diversity-matters" target="_blank">Read More</a>
+						</p>
+						<p>
+							Having a diverse workforce can also make products better, serving a diverse customer base. 
+							Consider how,<br /> 
+							<a href="http://www.cnn.com/2016/03/31/health/siri-apple-rape-response/" target="_blank">
+								Apple's Siri would be if it had more Women coders
+							</a>
+							&nbsp;&nbsp;
+							<b>- And -</b>
+							&nbsp;&nbsp;
+							<a href="http://www.huffingtonpost.com/entry/heres-why-facial-recognition-tech-cant-figure-out-black-people_us_56d5c2b1e4b0bf0dab3371eb?ncid=tweetlnkushpmg00000067" target="_blank">
+								Why Facial Recognition Tech Can't Figure Out Black People
+							</a>
+							<br />
+							How much better HP’s face recognition would be if it had more African American coders: &nbsp;
+							<a href="https://www.youtube.com/watch?v=t4DT3tQqgRM&feature=youtu.be" target="_blank"><i class="fa fa-youtube"></i> Watch</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden wcri">
+					<div class="col-md-8">
+						<p>It’s important to acknowledge that even when we have talented and qualified students from diverse backgrounds, they may face
+						challenges in the job market. Below are some articles that provide insight into these challenges, including cultural fit and sexism:</p>
+						<p>
+							The Lack Of Diversity In Tech Is A Cultural Issue (August 12, 2015):
+							<a href="http://www.forbes.com/sites/bonniemarcus/2015/08/12/the-lack-of-diversity-in-tech-is-a-cultural-issue/#21a05d633577" target="_blank">
+								Read More
+							</a>
+						</p>
+						<p>
+							Can't hack it: Tech's diversity efforts are 'a failure' (January 19, 2016):
+							<a href="http://money.cnn.com/2016/01/19/technology/diversity-chiefs-tech/index.html" target="_blank">
+								Read More
+							</a>
+						</p>
+						<p>
+							Why Doesn’t Silicon Valley Hire Black Coders? (January 21, 2016):
+							<a href="http://www.bloomberg.com/features/2016-howard-university-coders/" target="_blank">
+								Read More
+							</a>
+						</p>
+						<p>
+							Women considered better coders – but only if they hide their gender (February 12, 2016):
+							<a href="http://www.theguardian.com/technology/2016/feb/12/women-considered-better-coders-hide-gender-github" target="_blank">
+								Read More
+							</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden mg">
+					<div class="col-md-12">
+						<p><b>Microaggressions</b><br />
+						"Brief and commonplace daily verbal, behavioral, and environmental indignities, whether intentional or unintentional, that 
+						communicate hostile, derogatory, or negative slights and insults to the target person or group"<br /></p>
+					</div>
+					<div class="col-md-4">
+						<img src="images/instructorcompanion/microaggressions.jpg" style="height:180px;width:200px;" alt="Word cloud image for Microaggressions" />	<br /><br />
+						Materials for avoiding microaggressions during computer science instruction:<br />
+						<a href="instructor_companion/best_practices.pdf" target="_blank"  onclick="ga('send', 'event', 'Download');">
+							<span class="glyphicon glyphicon-download"></span>&nbsp;Download - Best Practices
+						</a>
+						<br />
+						<a href="instructor_companion/presentation_slides.pdf" target="_blank"  onclick="ga('send', 'event', 'Download');">
+							<span class="glyphicon glyphicon-download"></span>&nbsp;Download - Presentations Slides
+						</a>
+					</div>
+					<div class="col-md-8">
+						<center>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/6BL0HkWABb8" frameborder="0" allowfullscreen></iframe>
+						</center>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden st">
+					<div class="col-md-12">
+						<p><b>Stereotype Threat</b></p>
+						<p>
+							Stereotype threat refers to being at risk of confirming a negative stereotype about one's group (i.e., women are not good 
+							programmers, African Americans are not intelligent.). Decades of research show that stereotype threat can undermine students’ 
+							performance—even in subjects that they excel in.
+						</p>
+						<p>
+							There are several empirically validated strategies for reducing stereotype threat: &nbsp;
+							<a href="http://gregorywalton-stanford.weebly.com/uploads/4/9/4/4/49448111/strategiestoreducestereotypethreat.pdf" target="_blank">
+								<span class="glyphicon glyphicon-download"></span> Download
+							</a>
+						</p>
+						<p>
+							TIDES@CSUN has created resources that meet some of the effective strategies:
+							<ul>
+								<li>Strategy #7:  creating a group project that profiles a successful minority leader/entrepreneur in one’s field.</li>
+								<li>Strategy #10: Creating a positive feedback culture: <a href="#" id="linkFC">Read More</a></li>
+								<li>
+									Strategy #11: At the beginning of the semester, and throughout the semester, discussing malleable vs fixed abilities 
+									(also listed in feedback culture): 
+									<a href="https://hbr.org/2012/01/the-right-mindset-for-success/" target="_blank">Read More</a>
+								</li>
+							</ul>
+						</p>
+						<p>
+							<span class="lead">Resources:</span><br />
+							Background: <a href="http://reducingstereotypethreat.org/" target="_blank">Visit this link for more information</a><br /><br />
+							Walton, G., Cohen, G., and Steele, C. (2012). Empirically Validated Strategies for Reducing Stereotype Threat: 
+							<a href="http://gregorywalton-stanford.weebly.com/uploads/4/9/4/4/49448111/strategiestoreducestereotypethreat.pdf" target="_blank">Read More</a>
+						</p>
+						<p>
+							Manfred F.R. Kets de Vries (2005). The Danger of Feeling Like a Fake. Harvard Business Review: 
+							<a href="https://hbr.org/2005/09/the-dangers-of-feeling-like-a-fake" target="_blank">Read More</a>
+						</p>
+						<p>
+							Block, C. J., Koch, S. M., Liberman, B. E., Merriweather, T. J., & Roberson, L. (2011). Contending With Stereotype Threat at Work:
+							A Model of Long-Term Responses. The Counseling Psychologist, 39(4), 570-600: 
+							<a href="http://www.apa.org/education/ce/stereotype-threat.pdf" target="_blank">Read More</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div id="fc" class="col-md-12 wow fadeInDown hidden fc">
+					<div class="col-md-12">
+						<p><b>Feedback Culture</b></p>
+						<p>
+							As instructors, we want to be mindful of the feedback we give. 
+							<a href="http://www.edutopia.org/blog/tips-providing-students-meaningful-feedback-marianne-stenger" target="_blank">
+								Here are 5 Research-Based Tips for Providing Students with Meaningful Feedback
+							</a>
+						</p>
+						<p>The heart of CS, and STEM in general, is solving problems. The process includes identifying problems, testing solutions, and 
+						making improvements.  Thus, giving and receiving feedback is an important part of the culture of learning and innovation. At the 
+						beginning of the semester, make it clear to students that this class will focus on developing these skills.</p>
+						<p>
+							Talking points:<br />
+							<ul>
+								<li>Being receptive to feedback is an important life skill, and seen as desirable by employers.</li>
+								<li>In almost any job, people are expected to work collaboratively. How one respond to feedback from peers and supervisors 
+								affects their perceptions of one’s capabilities.</li>
+								<li>
+									Feedback lead to better products or outcomes.
+									<ul>
+										<li>Example: If you were to create an app, you want to make sure it doesn’t have bugs, is user-friendly, is attractive,
+										etc. It’s important to get feedback from trusted colleagues before it is launched for mass consumption</li>
+									</ul>
+								</li>
+								<li>
+									Focus on how abilities are malleable, not fixed: 
+									<a href="https://hbr.org/2012/01/the-right-mindset-for-success/">Read More</a>
+									<ul>
+										<li>Example: You’re in this class because you’re going to learn new skills and apply them. These skills and abilities 
+										are always developing, and requires hard work. Thus, feedback is an opportunity for improvement rather than an insult 
+										to your abilities or character.</li>
+									</ul>
+								</li>
+							</ul>
+						</p>
+						<div class="col-md-4">
+							<p>
+								<span class="lead">When Responding to Negative Feedback</span><br />
+								(Click image to enlarge)<br />
+								<a href="#" id="pop">
+									<img src="images/instructorcompanion/feedbackculture.JPG" height="180px" width="171px" alt="Image showing what to do when someone gives you a negative feedback" /><br />
+								</a>
+								<a href="http://www.wsj.com/articles/how-to-take-criticism-well-1403046866" target="_blank">Image by James Sharp</a><br />
+							</p>
+						</div>
+						<div class="col-md-8">
+							<p>
+								<span class="lead">Resources:</span><br />
+							</p>
+							<p>
+								Receiving and giving effective feedback: 
+								<a href="https://uwaterloo.ca/centre-for-teaching-excellence/teaching-resources/teaching-tips/assessing-student-work/grading-and-feedback/receiving-and-giving-effective-feedback" target="_blank">Read More</a><br />
+							</p>
+							<p>
+								How to receive feedback and criticism:
+								<a href="http://www.forbes.com/sites/kevinkruse/2014/08/12/how-to-receive-feedback-and-criticism/#2412e00b400b" target="_blank">Read More</a>
+							</p>
+						</div>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden ccc">
+					<div class="col-md-12">
+						<p><b>Caring Community in Classroom</b></p>
+						<p>
+							Learn why the simple task of learning your students’ names matter, <br />
+							<center>Politics of Naming by Tracy Lachica Buenavista, Associate Professor
+							of Asian American Studies at CSUN</center>
+						</p>
+						<center>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/Cnfqn_6_UwA?list=PLxY51hkCoOiUIOVi0_WaJsHyfyPzqaQQt" frameborder="0" allowfullscreen></iframe>
+						</center>
+						<p>
+							<br />To learn more, read the article referenced in the video:<br />
+							<a target="_blank" href="http://eric.ed.gov/?id=EJ974942"><i>Kohli, R., & Solórzano, D. G. (2012). Teachers, please learn our names!: Racial 
+							microaggressions and the K-12 classroom. Race
+							Ethnicity and Education, 15(4), 441-462.</i></a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden crcr">
+					<div class="col-md-12">
+						<p><b>Culturally Responsive Conflict Resolution</b></p>
+						<p>
+							<span class="lead">Promoting Peaceful Classroom Community</span><br />
+							It is essential to create and promote a positive and peaceful culture within schools and classroom, especially when 
+							students are beginning to learn how to interact and deal with conflict. Teach students to respect diversity and be aware
+							of harmful stereotypes and bullying.
+						</p>
+						<p>
+							<span class="lead">Teach Social Skills</span><br />
+							Teaching social skills to students is essential in helping them to learn peaceful conflict resolution techniques such as 
+							calming down (e.g. walk away, count to 10, etc.); communicating your feelings; and talking through the conflict to resolve.
+							Students can also become involved with service learning projects in which they give back to their local community to gain 
+							compassion and empathy for others. Model and practice social skills, equality, and fairness when working with students.
+						</p>
+						<p>	
+							<span class="lead">Teach Anger Management</span><br />
+							Teach students to be aware of how their body feels when they become angry. This will help them recognize their emotions so 
+							that they can learn how to calm themselves down and de-escalate before becoming aggressive.
+						</p>
+						<p>
+							<span class="lead">Teach Students to be Peacemakers</span><br />
+							The Teaching Students To Be Peacemakers (TSP) program offered by the Cooperative Learning Center of the University of 
+							Minnesota is a program in which students learn steps to resolve conflict peacefully through a cooperative environment. 
+							Students learn to be peacemakers in a supportive environment and the teachers implement the program by teaching the 
+							students the conflict resolution skills. These skills are consistently reviewed and built upon.<br />
+							<a href="https://www.ncjrs.gov/pdffiles/conflic.pdf" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">Create and Maintain a Culture of Peace</span><br />
+							Involve students at the beginning of the year when developing guidelines for your "positive classroom culture." This 
+							encourages students to work together and listen to their peers' ideas and contributions, which promotes empathy and 
+							understanding of one another. Students will take pride in developing these guidelines and will be more likely to practice 
+							them.<br />
+							<a target="_blank" href="http://www.tolerance.org/lesson/shaping-our-culturally-responsive-selves">Read More</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden csl">
+					<div class="col-md-12">
+						<p><b>Community Service Learning</b></p>
+						<p>
+							<span class="lead">“Making Service Learning Accessible to Computer Scientists.” Brian J. Rosmaita.</span><br />
+							This article provides an overview of the benefits and challenges involved in community service learning projects in computer 
+							science classes.<br />
+							<a href="http://academics.hamilton.edu/computer_science/brosmait/talks/2007-03-10/fp230-rosmaita.html" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">“Computer Science and service learning: Empowering nonprofit organizations through open source content management systems.” 
+							Linda M. Seiter.</span><br />
+							This resource describes how students can use free and open source software to build web sites for community organizations.<br />
+							<a href="http://www.hfoss.org/symposium09/documentdl/papers/HFOSS_Symp-final28.pdf" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">Service-Learning in the Computer and Information Sciences: Practical Applications in Engineering Education.” Brian A. 
+							Nejmeh.</span><br />
+							A book that provides a road map for service-learning partnerships between information science and nonprofit organizations: 
+							While service-learning is a well-known educational method for integrating learning experiences with community service, it is 
+							only now beginning to emerge in computer and information sciences (CIS). This book introduces a framework for service learning
+							in CIS, addressing both the challenges and opportunities of this approach for all stakeholders involved—faculty, students, and
+							community nonprofit organizations (NPOs), both domestic and abroad.<br />
+							<a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118100344.html" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">“Service Learning in Computer Science and Engineering.” Leah H. Jamieson, Moderator.</span><br />
+							A panel that includes students, professors, and community partners discusses various issues in service learning projects in 
+							computer science classes including how to fit it in the curriculum, the value of the soft skills often needed in pursuing these
+							projects, and the competing agendas of the university and community partners.<br />
+							<a href="http://delivery.acm.org/10.1145/570000/563391/p133-jamieson.pdf" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">“Incorporating service learning into computer science courses.” Joo Tan, John Phillips.</span><br />
+							This article provides excellent detail for professors interested in the design of specific types of service learning 
+							activities possible in computer science and describes how to deal with some of the challenges and the various benefits.<br />
+							<a href="http://delivery.acm.org/10.1145/1050000/1047854/p57-tan.pdf" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">“Service Learning in Computer Science.” Sonoma State University Center for Community Engagement.</span><br />
+							This web site describes the two types of community service learning projects commonly done and provides examples.<br />
+							<a href="http://www.sonoma.edu/cce/faculty/sl_computerscience.html" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">National Service Learning Clearinghouse.</span><br />
+							The Clearinghouse is the Nation's #1 library of service-learning resources. The Clearinghouse offers thousands of free online 
+							resources for K-12, higher education, community based organization, and tribal communities. You may search for background as 
+							well as specific resources.<br />
+							<a href="https://gsn.nylc.org/clearinghouse" target="_blank">Read More</a>
+						</p>
+						<p>
+							<span class="lead">Resources:</span><br />
+							How community service option may be incorporated into a Computer Science course syllabus: 
+							<a href="instructor_companion/community_service2.pdf" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+									Download
+							</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden bbma">
+					<div class="col-md-12">
+						<p><b>BaFa BaFa Multicultural Activity</b></p>
+						<p>
+							The BaFa BaFa Multicultural Activity is a type of activity designed for industry to help promote cross-cultural understanding. In
+							the activity, individuals are placed into two groups and assigned specific types of behaviors that they are supposed to follow
+							based on group membership. The activity will take a whole class period (1 to 2 hours) and may work best in classes where you do 
+							require group work.  Ideally the two groups work with the two groups individually. Alternatively, you can print out instructions 
+							for each group. The goal of the activity is to help students reflect on multicultural and group misunderstandings and dynamics.
+						</p>
+						<p>
+							<span class="lead">Resources:</span><br />
+							BaFa BaFa Simulation Instructions: &nbsp;&nbsp;&nbsp;
+							<a href="instructor_companion/bafa_bafa_simulation_instruction_document.pdf" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+								Document
+							</a>
+							&nbsp;
+							<a href="instructor_companion/bafa_bafa_simulation_instruction_slides.pptx" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+								Slides
+							</a>
+							<br />
+							Alpha Culture: &nbsp;&nbsp;&nbsp;
+							<a href="instructor_companion/bafa_bafa_alpha_culture_document.pdf" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+								Document
+							</a>
+							&nbsp;
+							<a href="instructor_companion/bafa_bafa_alpha_culture_slides.pptx" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+								Slides
+							</a>
+							<br />
+							Beta Culture: &nbsp;&nbsp;&nbsp;
+							<a href="instructor_companion/bafa_bafa_beta_culture_document.pdf" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+								Document
+							</a>
+							&nbsp;
+							<a href="instructor_companion/bafa_bafa_beta_culture_slides.pptx" target="_blank"  onclick="ga('send', 'event', 'Download');">
+								<span class="glyphicon glyphicon-download"></span> 
+								Slides
+							</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden wp">
+					<div class="col-md-12">
+						<p><b>Women and Programming</b></p>
+						<p>
+							Women More Likely Than Men to Leave Intro CS Courses Due to Teaching Style and Rigor<br />
+							<a href="http://cra.org/crn/2016/03/women-more-likely-than-men-to-leave-intro-cs-courses-due-to-teaching-style-and-rigor/" target="_blank">
+								Read More
+							</a>
+						</p>
+						<p>
+							Diana Franklin. 2013. A Practical Guide to Gender Diversity for Computer Science Faculty. Morgan & Claypool Publishers. <br />
+							<a href="http://www.morganclaypool.com/doi/abs/10.2200/S00495ED1V01Y201304PRO002" target="_blank">
+								Read More
+							</a>
+						</p>
+						<p>
+							Gender distribution of developers according to StackOverflow survey: &nbsp;&nbsp;&nbsp; 
+							Male: 92.8% &nbsp;&nbsp;&nbsp; Female: 5.8% &nbsp;&nbsp;&nbsp; Other: 0.5% &nbsp;&nbsp;&nbsp; Undisclosed: 1.0%<br />
+							<a href="http://stackoverflow.com/research/developer-survey-2016#developer-profile-gender" target="_blank">Read More</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+				<div class="col-md-12 wow fadeInDown hidden smpt">
+					<div class="col-md-12">
+						<p><b>Some More Pratical Tips</b></p>
+						<p>
+							Myths about CS education: 
+							<a href="http://cacm.acm.org/blogs/blog-cacm/189498-top-10-myths-about-teaching-computer-science/fulltext" target="_blank">
+								Read More
+							</a>
+						</p>
+						<p>
+							AAC&U TIDES Guide to Identifying Culturally Responsive Teaching in Undergraduate Computer Science Classrooms: 
+							<a href="https://stem-central.net/groups/posts/1352/#.VvjOeUf5_Y4" target="_blank">
+								Read More
+							</a>
+						</p>
+					</div>
+					<hr class="col-md-12"/>
+				</div>
+			</div>
+			<!-- Creates the bootstrap modal where the image will appear -->
+			<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h4 class="modal-title" id="myModalLabel">When Responding to Negative Feedback...</h4>
+						</div>
+						<div class="modal-body">
+							<img src="images/instructorcompanion/feedbackculture.JPG" id="imagepreview" style="width:576px; height:606px;" alt="Image showing what to do when someone gives you a negative feedback" />
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer" class="midnight-blue footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6" style="font-size:20px;">
+						<b>Contact: </b>ani@csun.edu
+					</div>
+					<div class="col-sm-6">
+						<b>California State University, Northridge</b><br />
+						18111 Nordhoff Street, Northridge, CA 91330<br />
+						Phone: 818-677-1200<br />
+						&copy; 2008 CSU Northridge
+					</div>
+				</div>
+			</div>
+		</footer><!--/#footer-->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<script src="js/jquery.isotope.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/image-resize.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+			
+				//for the image preview
+				$("#pop").on("click", function() {
+					$('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
+					$('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+				});
+				
+				$("#linkFC").on("click", function(e){
+					$(".fc").removeClass("hidden");
+					$("html, body").animate({ scrollTop: $("#fc").offset().top - $("#header").offset().top  }, "slow");
+				});
+				
+				//animating the dropdown
+				$(window).scroll(function (event) {
+					var scroll = $(window).scrollTop();
+					if(scroll<=10){
+						$("#dropdownLabel").stop();
+						$("#dropdownLabel").animate({fontSize: "15px", paddingBottom: "0px"},{
+							duration: 300,
+							easing: "linear",
+						});
+					}else if(scroll<=20){
+						$("#dropdownLabel").stop();
+						$("#dropdownLabel").animate({fontSize: "20px", paddingBottom: "0px"},{
+							duration: 300,
+							easing: "linear",
+						});
+					}else if(scroll<=30){
+						$("#dropdownLabel").stop();
+						$("#dropdownLabel").animate({fontSize: "25px", paddingBottom: "5px"},{
+							duration: 300,
+							easing: "linear",
+						});
+						
+					}else if(scroll<=40){
+						$("#dropdownLabel").stop();
+						$("#dropdownLabel").animate({fontSize: "30px", paddingBottom: "10px"},{
+							duration: 300,
+							easing: "linear",
+						});
+					}
+				});
+			
+				//displaying the selected modules
+				$("#selection").on("change", function(){
+					var selection = $(this).val();
+					switch(selection){
+						case "nms":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "am":
+							$(".mg").removeClass("hidden");
+							$(".wcri").removeClass("hidden");
+							$(".ccc").removeClass("hidden");
+							$(".crcr").removeClass("hidden");
+							$(".wp").removeClass("hidden");
+							$(".smpt").removeClass("hidden");
+							$(".st").removeClass("hidden");
+							$(".fc").removeClass("hidden");
+							$(".csl").removeClass("hidden");
+							$(".bbma").removeClass("hidden");
+							break;
+						case "mg":
+							$(".mg").removeClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "wcri":
+							$(".mg").addClass("hidden");
+							$(".wcri").removeClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "ccc":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").removeClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "crcr":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").removeClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "wp":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").removeClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "smpt":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").removeClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "st":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").removeClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "fc":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").removeClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "csl":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").removeClass("hidden");
+							$(".bbma").addClass("hidden");
+							break;
+						case "bbma":
+							$(".mg").addClass("hidden");
+							$(".wcri").addClass("hidden");
+							$(".ccc").addClass("hidden");
+							$(".crcr").addClass("hidden");
+							$(".wp").addClass("hidden");
+							$(".smpt").addClass("hidden");
+							$(".st").addClass("hidden");
+							$(".fc").addClass("hidden");
+							$(".csl").addClass("hidden");
+							$(".bbma").removeClass("hidden");
+							break;
+					}
+					$(this).scroll();
+				});
+			});
+		</script>
+		
+	</body>
+</html>

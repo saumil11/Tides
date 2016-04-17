@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning To Code By Making Music</title>
+<p id="title" align = center >Learning To Code By Making Music</p>
+<p id="text" align = center >Generating world music beats using for loops</p>
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+
+	<!--<script type="text/javascript" src="code.js"></script>-->
+	
+</head>
+
+<body onload="init()">
+
+	<div align = center >
+	<p align=center >Click a button to play a beat for a short time:</p>
+	<button id="polkaButton" >Norteño/Polka<br>XxXxXxXx</button>
+	<button id="waltzButton" >Waltz<br>XxxXxx</button>
+	<button id="bluesButton" >Blues<br>XrXxrX</button><br>
+	<button id="salsaButton" >Salsa<br>XrrXrrXrrrXrXrrr</button>
+	<button id="rapButton" >HipHop<br>XrrXxrrrrXXrxrrr</button>
+	<button id="gospelButton" >Gospel<br>XrxrXXxr</button><br>
+	<button id="stop" style="display:none;">Stop</button>
+	<br></div>
+
+	<!-- Note: All SoundJS classes are listed here: -->
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/Proxy.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/definePropertySupported.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+     http://code.createjs.com -->
+	
+    <script>
+        var kick;            // the audio src we are trying to play
+        var soundInstance;  // the soundInstance returned by Sound when we create or play a src
+        var displayStatus;  // the HTML element we use to display messages to the user
+		
+		$("#polkaButton").click(function() {
+			playPolka();
+		});
+		
+		$("#waltzButton").click(function() {
+			playWaltz();
+		});
+		
+		$("#salsaButton").click(function() {
+			playSalsa();
+		});
+		
+		$("#bluesButton").click(function() {
+			playBlues();
+		});
+		$("#rapButton").click(function() {
+			playRap();
+		});
+		
+		$("#hiphopButton").click(function() {
+			playHiphop();
+		});
+		
+		$("#gospelButton").click(function() {
+			playGospel();
+		});
+		
+		$("#stop").click(function() {
+			stopAllSounds();
+		});
+		
+        function init() {
+			createjs.Sound.initializeDefaultPlugins();
+            // Create a single item to load.
+            var assetsPath = "assets/";
+			polka = assetsPath+"polka.ogg";
+			waltz = assetsPath+"waltz.ogg";
+			blues = assetsPath+"blues.ogg";
+			salsa = assetsPath+"salsa.ogg";
+			rap = assetsPath+"rap.ogg";
+			gospel = assetsPath+"gospel.ogg";
+            createjs.Sound.registerSound(polka);  // register sound, which preloads by default*/
+			createjs.Sound.registerSound(waltz);  
+			createjs.Sound.registerSound(salsa);
+			createjs.Sound.registerSound(blues);   			
+			createjs.Sound.registerSound(rap); 
+			createjs.Sound.registerSound(gospel);			
+        }
+		
+		function stopAllSounds() {
+			createjs.Sound.stop(polka);
+			createjs.Sound.stop(waltz);
+			createjs.Sound.stop(salsa);
+			createjs.Sound.stop(blues);
+			createjs.Sound.stop(rap);
+			createjs.Sound.stop(gospel);
+			document.getElementById("stop").style.display = "none";
+
+		}
+		function playPolka(){
+			stopAllSounds();
+			createjs.Sound.play(polka);	
+			document.getElementById("stop").style.display = "block";			
+		}
+		
+		function playWaltz(){
+			stopAllSounds();
+			createjs.Sound.play(waltz);
+			document.getElementById("stop").style.display = "block";			
+		}
+		
+		function playSalsa(){
+			stopAllSounds();
+			createjs.Sound.play(salsa);
+			document.getElementById("stop").style.display = "block";
+		}
+		
+		function playBlues(){
+			stopAllSounds();
+			createjs.Sound.play(blues);
+			document.getElementById("stop").style.display = "block";
+		}
+		
+		
+		function playRap(){
+			stopAllSounds();
+			createjs.Sound.play(rap);
+			document.getElementById("stop").style.display = "block";			
+		}
+		
+		function playGospel(){
+			stopAllSounds();
+			createjs.Sound.play(gospel);
+			document.getElementById("stop").style.display = "block";
+		}
+		
+    </script>
+
+</body>
+</html>

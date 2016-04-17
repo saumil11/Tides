@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning To Code By Making Music</title>
+<p id="title" align = center style="font-size:24px">Learning To Code By Making Music</p>
+<p id="text" align = center style="font-size:20px; ">Lyrics Processing</p>
+
+<!-- Note: All SoundJS classes are listed here: -->
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script>
+        var kick;            // the audio src we are trying to play
+        var soundInstance;  // the soundInstance returned by Sound when we create or play a src
+        var displayStatus;  // the HTML element we use to display messages to the user
+		var stops = "a,able,about,across,after,all,almost,also,am,among,an,and,any,are,as,at,be,because,been,but,by,can,cannot,could,dear,did,do,does,either,else,ever,every,for,from,get,got,had,has,have,he,her,hers,him,his,how,however,i,if,in,into,is,it,its,just,least,let,like,likely,may,me,might,most,must,my,neither,no,nor,not,of,off,often,on,only,or,other,our,own,rather,said,say,says,she,should,since,so,some,than,that,the,their,them,then,there,these,they,this,tis,to,too,twas,us,wants,was,we,were,what,when,where,which,while,who,whom,why,will,with,would,yet,you,your";
+		var stopWords = stops.split(",");
+		var lyrics;
+		var words;
+		var index;
+		var rowNum;
+		var table;
+		var top5 ;
+		var top5w ;
+        function init() {
+
+            // Create a single item to load.
+            var assetsPath = "assets/";
+			la = assetsPath+"la.wav";
+			java = assetsPath+"java.wav";
+
+			
+            word = document.getElementById("field");
+			var play = document.getElementById("count");
+			play.addEventListener("click", process, false);	
+			table = document.getElementById("myTable");
+			document.body.style.backgroundSize = screen.height + " " + screen.width*1.2;
+			
+        }
+		
+		function process(){
+			table.innerHTML = "";
+			index = 0;
+			top5 = [0,0,0,0,0];
+		    top5w = ["","","","",""];
+
+			lyrics = word.value;
+			var newchar = ' ';
+			lyrics = lyrics.split('\n').join(newchar);
+			lyrics = lyrics.split(',').join(newchar);
+			words = lyrics.split(" ");
+			words.sort();
+			while(index<words.length){
+			if (!isStopWord(words[index])&&(words[index].length>2))
+			{
+			var count = 1;
+			while(words[index]==words[index+1]){
+				count++;
+				index++;
+			}
+			insert(words[index],count);
+				
+			}
+			index++;
+			}
+		/*	for(var i=0;i<5;i++){
+			var row = table.insertRow(i);
+				var cell1 = row.insertCell(0);
+				var cell2 = row.insertCell(1);
+				cell1.innerHTML = top5w[i];
+				cell2.innerHTML = top5[i];
+			}*/
+			var row = table.insertRow(0);
+				var cell1 = row.insertCell(0);
+				cell1.innerHTML = "The most frequent word is: "+top5w[0]+".<br>It occurs"+top5[0]+" times.";
+		}
+
+		function isStopWord(word){
+			if(stopWords.indexOf(word)>=0)
+				return true;
+			else
+				return false;
+		}
+		
+		function insert(word, num){
+			if(num>top5[4]){
+				if(num>top5[0])
+				{
+					shiftDown(4);
+					top5[0]=num;
+					top5w[0]=word;
+				}
+				else if(num>top5[1])
+				{
+					shiftDown(3);
+					top5[1]=num;
+					top5w[1]=word;
+				}
+				else if(num>top5[2])
+				{
+					shiftDown(2);
+					top5[2]=num;
+					top5w[2]=word;
+				}
+				else if(num>top5[3])
+				{
+					shiftDown(1);
+					top5[3]=num;
+					top5w[3]=word;
+				}
+				else
+				{
+					top5[4]=num;
+					top5w[4]=word;
+				}
+			}
+		}
+		
+		function shiftDown(num){
+			var i=4;
+			while(num>0)
+			{
+				top5[i] = top5[i-1];
+				top5w[i] = top5w[i-1];
+				num--;
+				i--;
+			}			
+			
+		}
+    </script>
+</head>
+
+<body onload="init()"  ">
+
+	<div align = center >
+	<div style= "margin-top:5%;">
+<p align=center >The page finds the five most repeated words in a text</p>
+	<p align=center >Paste your lyrics in the text box then click process</p>
+	<textarea id="field" type="text" size="5000"  rows="15" cols="75" ></textarea></div>
+	<input type="button" id="count" value = "Process" align="center">
+	<img id="singer" style="position:fixed; top:40%; left:2%;" src="singer.jpg">
+	<img id="lyrics" style="position:fixed; top:40%; right:2%;" src="lyrics.png">
+	<table id = "myTable">
+	<br></div>
+
+	<!-- Note: All SoundJS classes are listed here: -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+     http://code.createjs.com -->
+
+</body>
+</html>

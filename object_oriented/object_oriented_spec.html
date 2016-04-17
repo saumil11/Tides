@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web developer/designer, Software developer. Here is an entire website about me.">
+    <meta name="author" content="Saumil Soni">
+    <meta name="keywords" content="Saumil,Soni,Saumil Soni">
+    <title>TIDES@CSUN</title>
+	
+	<!-- core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+	<link href="../css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+	<link rel="shortcut icon" type="image/png" href="../images/ico/csun.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+	<style>
+		.modal-dialog{
+			width: 70%;
+		}
+	</style>
+</head><!--/head-->
+
+<body class="homepage">
+	<noscript><div class="alert alert-warning">It looks like JavaScript is disabled on your browser, to better see this website it is
+	recommended that you enable it.</div></noscript>
+	
+    <div class="modal large fade" tabindex="-1" role="dialog" id="myModal">
+		<div class=" modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<center>
+						<h4 class="modal-title">Object Oriented</h4>
+						<h4 class="modal-title">Programming Module</h4>
+					</center>
+				</div>
+				<div class="modal-body">
+					<p>In this assignment, you need to implement a beat creating tool. The check boxes on each row represent equal time sections. If a box is
+					checked, the instrument should be played at that specific time. You will need to create at least two objects to do the assignment:</p>
+					<p>
+						<ol>
+							<li>
+								An Instrument object which has:
+								<ul>
+									<li>String that holds the name of the file to be played with the playFile() method.</li>
+									<li>An array of booleans to hold the values of the check boxes row. (checked = true, unchecked = false).</li>
+								</ul>
+							</li>
+							<li>
+								A Beat object that has: 
+								<ul>
+									<li>Instrument objects </li>
+									<li>Integer that represents how many time the beat should be played. </li>
+									<li>Integer waitTime that specifies how many milliseconds to wait between the played beats. It will be used by 
+									wait(milliseconds) method.</li>
+								</ul>
+							</li>
+						</ol>
+					</p>
+					<p>You are given:</p>
+					<ol>
+						<li>
+							A user interface that contains a play button, a table of check boxes, and the following methods:
+							<ul>
+								<li>UIManager(Main m,int rows,int columns); creates a user interface with "rows" number of instruments and "columns" number of
+								check boxes for each.</li>
+								<li>boolean[][] getArrayofCheckBoxes(); returns a two dimensional array that holds the current values of the check boxes.</li>
+								<li>void setLabels(String[] newLabels); changes the labels on the UI to the strings in the array newLabels.</li>
+							</ul>
+						</li>
+						<li>Several instrument sounds that you may use that are located in the "res" folder.</li>
+						<li>Sound Manager class that helps you play the sound files using the playFile(String filename) method, and it also has wait(milliseconds) method.</li>
+						<li>Skeleton code in the Main.java file that has booleans that hold the values of the check boxes, and the titles of the instruments in the user interface.</li>
+					</ol>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
+	<script src="../js/image-resize.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#myModal').modal({
+				backdrop: 'static',
+				keyboard: false
+			});
+		});
+	</script>
+	
+</body>
+</html>

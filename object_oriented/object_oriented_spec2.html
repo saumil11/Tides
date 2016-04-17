@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web developer/designer, Software developer. Here is an entire website about me.">
+    <meta name="author" content="Saumil Soni">
+    <meta name="keywords" content="Saumil,Soni,Saumil Soni">
+    <title>TIDES@CSUN</title>
+	
+	<!-- core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+	<link href="../css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+	<link rel="shortcut icon" type="image/png" href="../images/ico/csun.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+	<style>
+		.modal-dialog{
+			width: 70%;
+		}
+	</style>
+</head><!--/head-->
+
+<body class="homepage">
+	<noscript><div class="alert alert-warning">It looks like JavaScript is disabled on your browser, to better see this website it is
+	recommended that you enable it.</div></noscript>
+	
+    <div class="modal large fade" tabindex="-1" role="dialog" id="myModal">
+		<div class=" modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<center>
+						<h4 class="modal-title">Object Oriented Recording</h4>
+						<h4 class="modal-title">Programming Module</h4>
+					</center>
+				</div>
+				<div class="modal-body">
+					<p>Prior to implementing the module. You need to modify Redhat Linux's audio settings by following these steps:</p>
+					<ol>
+						<li>Go to System->Preferences->Sound</li>
+						<li>Under the Hardware tab make sure that the HDA NVidia is disabled and the Internal Audio is enabled with a profile of Analog Stereo
+						Duplex.</li>
+						<li>Under the Input tab make sure the Connector is "Microphone" and that the internal audio analog stereo radio button is selected.</li>
+						<li>Plug in your headphone earplugs (or microphone) into the audio jack that has both the microphone symbol and the headphone symbol.
+						You can see if your mic is working properly by tapping on the mic (earphones) and visually checking if there is movement in the Input 
+						tab section.</li>
+						<li>Under the Output tab make sure the Connect is: "Analog Speakers" and that the internal audio stereo radio button is selected.</li>
+						<li>Make sure that the Sound Preferences window is closed prior to running your java program. If this window is not closed, you will 
+						not be able to record anything.</li>
+					</ol>
+					<br />
+					<p>You are given:</p>
+					<p>
+						<ol>
+							<li>A Microphone class which you will use to record audio clips. The class contains the following methods:
+								<ul>
+									<li>startRecording()</li>
+									<li>stopRecording()</li>
+									<li>getAudioFormat()</li>
+									<li>getClip()</li>
+									<li>getAudioInputStream()</li>
+									<li>getData()</li>
+									<li>isRecording()</li>
+								</ul>
+								For more information on each method, type the method out and hover your mouse over the method (text) to see more information. 
+								Additionally you can refer to the Microphone source code comments.</li>
+							<li>A skeleton AudioClip class that only contains a constructor and 2 private variables (attributes). This class needs to be filled
+							in with the methods in the comment section of the class. Additional attributes may be required.</li>
+							<li>A main console user interface that provides stub selection inputs that need to be filled in with your object method calls.</li>
+						</ol>
+					</p>
+					<br />
+					<p>Requirements:</p>
+					<ol>
+						<li>The Microphone class returns an object called "Clip". You need to research this class and its methods to implement your own 
+						AudioClip class that does the following:
+							<ul>
+								<li>setAudioClip(...) method which sets the "Clip" and other attributes that may be needed to allow the methods below to work
+								properly.</li>
+								<li>play() method which plays an AudioClip.</li>
+								<li>stop() method which stops playing an AudioClip.</li>
+								<li>loop(...) method which loops an AudioClip a finite or infinite number of times.</li>
+								<li>setName(...) method which sets the name of the AudioClip.</li>
+								<li>getName() method which returns the name of the AudioClip.</li>
+								<li>isPlaying() method which returns if the AudioClip is playing or not (a Boolean).</li>
+							</ul>
+						</li>
+						<li>Fill in the main interface with your AudioClip and Microphone method calls. (There should be no "Clip" calls visible in this 
+						interface.)</li>
+					</ol>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
+	<script src="../js/image-resize.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#myModal').modal({
+				backdrop: 'static',
+				keyboard: false
+			});
+		});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning To Code By Making Music</title>
+<p id="title" align = center >Learning To Code By Making Music</p>
+<p id="text" align = center >Guess The Genre</p>
+
+	
+<style>
+body{
+background-image:url('background.jpg');
+background-repeat: no-repeat;
+background-position: center 1%;
+background-size: 60%;
+
+}
+div{
+margin-top:3%;
+}
+
+#title{
+font-size: 36px;
+}
+
+#text{
+font-size: 20px;
+}
+
+
+</style>
+</head>
+
+<body onload="init()">
+
+	<p align=center style = "margin-top:2%;" id="tip" >Click the generate note button. </p> 
+	<div align = center >
+	<button id="generate">Generate Song</button></br></br>
+	<input type="text" id="field" style="display:none;"><br>
+	<button id="submit" style="display:none;">Answer</button>
+	<p id="feedback">
+	<br></div>
+
+
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/Proxy.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/definePropertySupported.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script>
+	var soundInstance;  // the soundInstance returned by Sound when we create or play a src
+	var array;
+	var note;
+	var text;
+	window.addEventListener("load", init, false);
+	$("#generate").click(function() {
+			stopAllSounds();
+			playRandomSong();
+	});
+	$("#submit").click(function() {
+		if(text.value.toLowerCase().split(' ').join('') == array[gen][0].toLowerCase().split(' ').join('')){
+			document.getElementById("feedback").innerHTML ="Good Job!";
+			stopAllSounds();
+			createjs.Sound.play(array[gen][3-song]);
+
+		}
+		else
+			document.getElementById("feedback").innerHTML = "Try Again.";
+	});
+	function init() {
+			createjs.Sound.initializeDefaultPlugins();
+            // Create a single item to load.
+            var assetsPath = "assets/";
+			Arabic1 = assetsPath + "ArabicKhaleeji1.mp3";
+			Arabic2 = assetsPath + "ArabicKhaleeji1.mp3";
+			Banda1 = assetsPath + "Banda1.mp3";
+			Banda2 = assetsPath + "Banda2.mp3";
+			Bhangra1 = assetsPath + "Bhangra1.mp3";
+			Bhangra2 = assetsPath + "Bhangra2.mp3";
+			Bluegrass1 = assetsPath + "Bluegrass1.mp3";
+			Bluegrass2 = assetsPath + "Bluegrass2.mp3";
+			ChineseOpera1 = assetsPath + "ChineseOpera1.mp3";
+			ChineseOpera2 = assetsPath + "ChineseOpera2.mp3";
+			ChinesePop1 = assetsPath + "ChinesePop1.mp3";
+			ChinesePop2 = assetsPath + "ChinesePop2.mp3";
+			ClassicalIndian1 = assetsPath + "ClassicalIndian1.mp3";
+			ClassicalIndian2 = assetsPath + "ClassicalIndian2.mp3";
+			ClassicalKorean1 = assetsPath + "ClassicalKorean1.mp3";
+			ClassicalKorean2 = assetsPath + "ClassicalKorean2.mp3";
+			Country1 = assetsPath + "Country1.mp3";
+			Country2 = assetsPath + "Country2.mp3";
+			Gospel1 = assetsPath + "Gospel1.mp3";
+			Gospel2 = assetsPath + "Gospel2.mp3";
+			HipHop1 = assetsPath + "Hip-Hop1.mp3";
+			HipHop2 = assetsPath + "Hip-Hop2.mp3";
+			Jazz1 = assetsPath + "Jazz1.mp3";
+			Jazz2 = assetsPath + "Jazz2.mp3";
+			KoreanPop1 = assetsPath + "KoreanPop1.mp3";
+			KoreanPop2 = assetsPath + "KoreanPop2.mp3";
+			Mariachi1 = assetsPath + "Mariachi1.mp3";
+			Mariachi2 = assetsPath + "Mariachi2.mp3";
+			Norteno1 = assetsPath + "Norteno1.mp3";
+			Norteno2 = assetsPath + "Norteno2.mp3";
+			PersianClassical1 = assetsPath + "PersianClassical1.mp3";
+			PersianClassical2 = assetsPath + "PersianClassical2.mp3";
+			PersianPop1 = assetsPath + "PersianPop1.mp3";
+			PersianPop2 = assetsPath + "PersianPop2.mp3";
+			Taiko1 = assetsPath + "Taiko1.mp3";
+			Taiko2 = assetsPath + "Taiko2.mp3";
+
+			createjs.Sound.registerSound(Arabic1);  // register sound, which preloads by default*/
+			createjs.Sound.registerSound(Arabic2);  
+            createjs.Sound.registerSound(Banda1);  
+			createjs.Sound.registerSound(Banda2);  
+			createjs.Sound.registerSound(Bhangra1);
+			createjs.Sound.registerSound(Bhangra2);   			
+			createjs.Sound.registerSound(Bluegrass1); 
+			createjs.Sound.registerSound(Bluegrass2);
+			createjs.Sound.registerSound(ChineseOpera1);
+			createjs.Sound.registerSound(ChineseOpera2);   			
+			createjs.Sound.registerSound(ChinesePop1); 
+			createjs.Sound.registerSound(ChinesePop2);
+			createjs.Sound.registerSound(ClassicalIndian1);
+			createjs.Sound.registerSound(ClassicalIndian2);   			
+			createjs.Sound.registerSound(ClassicalKorean1); 
+			createjs.Sound.registerSound(ClassicalKorean2);
+			createjs.Sound.registerSound(Country1);
+			createjs.Sound.registerSound(Country2);   			
+			createjs.Sound.registerSound(Gospel1); 
+			createjs.Sound.registerSound(Gospel2);
+			createjs.Sound.registerSound(HipHop1);
+			createjs.Sound.registerSound(HipHop2);   			
+			createjs.Sound.registerSound(Jazz1); 
+			createjs.Sound.registerSound(Jazz2);
+			createjs.Sound.registerSound(KoreanPop1);
+			createjs.Sound.registerSound(KoreanPop2);   			
+			createjs.Sound.registerSound(Mariachi1); 
+			createjs.Sound.registerSound(Mariachi2);
+			createjs.Sound.registerSound(Norteno1);
+			createjs.Sound.registerSound(Norteno2);   			
+			createjs.Sound.registerSound(PersianClassical1); 
+			createjs.Sound.registerSound(PersianClassical2);
+			createjs.Sound.registerSound(PersianPop1); 
+			createjs.Sound.registerSound(PersianPop2);
+			createjs.Sound.registerSound(Taiko1);
+			createjs.Sound.registerSound(Taiko2);
+			
+			
+			array = [["ArabicKhaleeji",Arabic1,Arabic2],["Banda",Banda1,Banda2],["Bhangra",Bhangra1,Bhangra2],["Bluegrass",Bluegrass1,Bluegrass2],["ChineseOpera",ChineseOpera1,ChineseOpera2],["ChinesePop",ChinesePop1,ChinesePop2],["ClassicalIndian",ClassicalIndian1,ClassicalIndian2],["ClassicalKorean",ClassicalKorean1,ClassicalKorean2],["Country",Country1,Country2],["Gospel",Gospel1,Gospel1],["HipHop",HipHop1,HipHop2],["Jazz",Jazz1,Jazz2],["KoreanPop",KoreanPop1,KoreanPop2],["Mariachi",Mariachi1,Mariachi2],["Norteno",Norteno1,Norteno2],["PersianClassical",PersianClassical1,PersianClassical2],["PersianPop",PersianPop1,PersianPop2],["Taiko",Taiko1,Taiko2]];
+			text = document.getElementById("field");
+	}
+	
+	function playRandomSong(){
+	gen = Math.floor(Math.random()*18);
+	song = Math.floor(Math.random()*2)+1;
+	createjs.Sound.play(array[gen][song]);
+	document.getElementById("tip").innerHTML ="Guess the genre of the song being played by typing the genre name in the text box and clicking Answer. If you guess correctly, another song of that genre will be played.<br> Choose from the following list of genres: (ArabicKhaleeji, Banda, Bhangra, Bluegrass, ChineseOpera, ChinesePop, ClassicalIndian, ClassicalKorean, Country, Gospel, HipHop, Jazz, KoreanPop, Mariachi, Norteno, PersianClassical, PersianPop, Taiko)";
+	document.getElementById("field").style.display = "block";
+	document.getElementById("submit").style.display = "block";
+	}
+	
+	function stopAllSounds(){
+			createjs.Sound.stop(Arabic1);
+			createjs.Sound.stop(Arabic2);
+			createjs.Sound.stop(Banda1);
+			createjs.Sound.stop(Banda2);
+			createjs.Sound.stop(Bhangra1);
+			createjs.Sound.stop(Bhangra2);
+			createjs.Sound.stop(Bluegrass1);
+			createjs.Sound.stop(Bluegrass2);
+			createjs.Sound.stop(ChineseOpera1);
+			createjs.Sound.stop(ChineseOpera2);
+			createjs.Sound.stop(ChinesePop1);
+			createjs.Sound.stop(ChinesePop2);
+			createjs.Sound.stop(ClassicalKorean1);
+			createjs.Sound.stop(ClassicalKorean2);
+			createjs.Sound.stop(Country1);
+			createjs.Sound.stop(Country2);
+			createjs.Sound.stop(Gospel1);
+			createjs.Sound.stop(Gospel2);
+			createjs.Sound.stop(HipHop1);
+			createjs.Sound.stop(HipHop2);
+			createjs.Sound.stop(Jazz1);
+			createjs.Sound.stop(Jazz2);
+			createjs.Sound.stop(KoreanPop1);
+			createjs.Sound.stop(KoreanPop2);
+			createjs.Sound.stop(Mariachi1);
+			createjs.Sound.stop(Mariachi2);
+			createjs.Sound.stop(Norteno1);
+			createjs.Sound.stop(Norteno2);
+			createjs.Sound.stop(PersianClassical1);
+			createjs.Sound.stop(PersianClassical2);
+			createjs.Sound.stop(PersianPop1);
+			createjs.Sound.stop(PersianPop2);
+			createjs.Sound.stop(Taiko2);
+			createjs.Sound.stop(Taiko2);
+	}
+	
+	
+
+	
+	
+		</script>
+</body>
+</html>

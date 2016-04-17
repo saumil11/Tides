@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web developer/designer, Software developer. Here is an entire website about me.">
+    <meta name="author" content="Saumil Soni">
+    <meta name="keywords" content="Saumil,Soni,Saumil Soni">
+    <title>TIDES@CSUN</title>
+	
+	<!-- core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+	<link href="../css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+	<link rel="shortcut icon" type="image/png" href="../images/ico/csun.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body class="homepage">
+	<noscript><div class="alert alert-warning">It looks like JavaScript is disabled on your browser, to better see this website it is
+	recommended that you enable it.</div></noscript>
+	
+    <div class="modal large fade" tabindex="-1" role="dialog" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<center>
+						<h4 class="modal-title">Bits to Beats: World Music Drum Machine </h4>
+						<h4 class="modal-title">Programming Module</h4>
+					</center>
+				</div>
+				<div class="modal-body">
+					<p>Write a program to create a drum machine with the versatility to compose rhythmic beats from difference cultures and musical traditions,
+					given below. The types of beats are represented with letters. The letter X represents a base drum, the letter x represents a snare drum, 
+					r represents a musical rest where no instrument is played.</p>
+					<ol>
+						<li>Norteño/Polka (Found in Mexican music): XxXxXxXx </li>
+						<li>Waltz (Also, found in Mexican music): XxxXxx </li>
+						<li>Salsa (Beat is called Clave): XrrXrrXrrrXrXrrr </li>
+						<li>Blues: XrXxrX </li>
+						<li>Hip-hop: XrrXxrrrrXXrxrrr </li>
+						<li> Gospel: XrxrXXxr</li>
+						<li>For the last beat, find and add a popular rhythm to your drum machine, not already represented here.</li>
+					</ol>
+					<p>The sound manager class has the following methods to help you with the assignment:</p>
+					<ul>
+						<li><i>playBass()</i> which plays a bass drum sound.</li>
+						<li><i>playSnare()</i> which plays a snare drum sound.</li>
+						<li><i>waitQuarter()</i> which adds a wait time of a quarter of a second between the beats.</li>
+						<li><i>waitHalf()</i> which adds a wait time of half a second between the beats.</li>
+						<li><i>waitSecond()</i> which adds a wait time of one second between the beats.</li>
+						<li><i>wait(int milliseconds)</i> which adds a wait time of the specified milliseconds between the beats.</li>
+					</ul>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
+	<script src="../js/image-resize.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#myModal').modal({
+				backdrop: 'static',
+				keyboard: false
+			});
+		});
+	</script>
+	
+</body>
+</html>

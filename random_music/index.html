@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Learning To Code By Making Music</title>
+<p id="title" align = center style="font-size:24px">Learning To Code By Making Music</p>
+<p id="text" align = center style="font-size:20px; margin-top:-0.5%;">Mixing Music Randomly</p>
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+
+<!-- Note: All SoundJS classes are listed here: -->
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/Proxy.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/IndexOf.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/utils/definePropertySupported.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/Event.js"></script>
+	<script type="text/javascript" src="../SoundJS-master/src/createjs/events/EventDispatcher.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/Sound.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/WebAudioPlugin.js"></script>
+    <script type="text/javascript" src="../SoundJS-master/src/soundjs/HTMLAudioPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script>
+        var soundInstance;  // the soundInstance returned by Sound when we create or play a src
+        var displayStatus;  // the HTML element we use to display messages to the user
+		var rand1 = 0;
+		var rand2 = 0;
+        function init() {
+
+			createjs.Sound.initializeDefaultPlugins();
+            // Create a single item to load.
+            var assetsPath = "assets2/";
+			b1 = assetsPath+"beat1.mp3";
+			b2 = assetsPath+"beat2.mp3";
+			b3 = assetsPath+"beat3.mp3";
+			b4 = assetsPath+"beat4.mp3";
+			b5 = assetsPath+"beat5.mp3";
+			b6 = assetsPath+"beat6.mp3";
+			b7 = assetsPath+"beat7.mp3";
+			m1 = assetsPath+"background1.mp3";
+			m2 = assetsPath+"background2.mp3";
+			m3 = assetsPath+"background3.mp3";
+			m4 = assetsPath+"background4.mp3";
+			m5 = assetsPath+"background5.mp3";
+			m6 = assetsPath+"background6.mp3";
+			m7 = assetsPath+"background7.mp3";
+			
+			createjs.Sound.registerSound(b1);  
+			createjs.Sound.registerSound(m1); 
+			createjs.Sound.registerSound(b2);  
+			createjs.Sound.registerSound(m2);  
+			createjs.Sound.registerSound(b3);  
+			createjs.Sound.registerSound(m3);  
+			createjs.Sound.registerSound(b4);  
+			createjs.Sound.registerSound(m4);  
+			createjs.Sound.registerSound(b5);  
+			createjs.Sound.registerSound(m5);  
+			createjs.Sound.registerSound(b6);  
+			createjs.Sound.registerSound(m6);  
+			createjs.Sound.registerSound(b7);  
+			createjs.Sound.registerSound(m7);  
+			
+			var play = document.getElementById("speak");
+			var s = document.getElementById("stop");
+			play.addEventListener("click", playRandom, false);
+			s.addEventListener("click", stopAll, false);
+        }
+		
+		function playRandom(){
+			rand1 = Math.floor(Math.random() * (7)) + 1;
+			rand2 = Math.floor(Math.random() * (7)) + 1;
+		switch (rand1){
+			case 1:
+			createjs.Sound.play(b1);
+			break;
+			case 2:
+			createjs.Sound.play(b2);
+			break;
+			case 3:
+			createjs.Sound.play(b3);
+			break;
+			case 4:
+			createjs.Sound.play(b4);
+			break;
+			case 5:
+			createjs.Sound.play(b5);
+			break;
+			case 6:
+			createjs.Sound.play(b6);
+			break;
+			case 7:
+			createjs.Sound.play(b7);
+			break;
+			default:
+		}
+		switch (rand2){
+			case 1:
+			createjs.Sound.play(m1);
+			break;
+			case 2:
+			createjs.Sound.play(m2);
+			break;
+			case 3:
+			createjs.Sound.play(m3);
+			break;
+			case 4:
+			createjs.Sound.play(m4);
+			break;
+			case 5:
+			createjs.Sound.play(m5);
+			break;
+			case 6:
+			createjs.Sound.play(m6);
+			break;
+			case 7:
+			createjs.Sound.play(m7);
+			break;
+			default:
+		}
+}		
+
+		function stopAll(){
+		createjs.Sound.stop(b1);
+		createjs.Sound.stop(b2);
+		createjs.Sound.stop(b3);
+		createjs.Sound.stop(b4);
+		createjs.Sound.stop(b5);
+		createjs.Sound.stop(b6);
+		createjs.Sound.stop(b7);
+		createjs.Sound.stop(m1);
+		createjs.Sound.stop(m2);
+		createjs.Sound.stop(m3);
+		createjs.Sound.stop(m4);
+		createjs.Sound.stop(m5);
+		createjs.Sound.stop(m6);
+		createjs.Sound.stop(m7);		
+		}	
+		
+    </script>
+</head>
+
+<body onload="init()" style="background-image:url('background.jpg');background-repeat: no-repeat;
+background-size: cover; ">
+
+	<div >
+	<div style="margin-left:10%; margin-top:15%; font-size:18px ">
+	<p  >Click the play button to play a beat that is generated from a random mixture <br>of a beat with dupstep music. Click the pause button to stop the music.</p>
+	<input style="margin-left:10%;" type="image" src="assets/button.png" id="speak" height="80px" width="80px" align="center"><input type="image" src="assets/stop.jpg" id="stop" height="70px" width="70px" align="center"></div>
+	<br></div>
+
+	<!-- Note: All SoundJS classes are listed here: -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+
+	<!-- We also provide hosted minified versions of all CreateJS libraries.
+     http://code.createjs.com -->
+
+</body>
+</html>

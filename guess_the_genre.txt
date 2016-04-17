@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web developer/designer, Software developer. Here is an entire website about me.">
+    <meta name="author" content="Saumil Soni">
+    <meta name="keywords" content="Saumil,Soni,Saumil Soni">
+    <title>TIDES@CSUN</title>
+	
+	<!-- core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/prettyPhoto.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+	<link href="../css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+	<link rel="shortcut icon" type="image/png" href="../images/ico/csun.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body class="homepage">
+	<noscript><div class="alert alert-warning">It looks like JavaScript is disabled on your browser, to better see this website it is
+	recommended that you enable it.</div></noscript>
+	
+    <div class="modal large fade" tabindex="-1" role="dialog" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<center>
+						<h4 class="modal-title">Electronic Music - Random Number Generation </h4>
+						<h4 class="modal-title">Programming Module</h4>
+					</center>
+				</div>
+				<div class="modal-body">
+					<p>In this assignment, you will need to generate random numbers to play different combinations of music. The functions playBeat(int number) and playBackground(int number) play one of seven sound files located in the project's "res" folder based on the value of the number.
+					</p>
+					<p>Sample electronic music files already exist in the res folder. You may use those or replace them to with your own files. However, make 
+					sure that your files are .wav files and have the exact name as the already existing file. It's recommended that all the files have the
+					same length.</p>
+					<p>Write a program that uses those two functions and randomly chooses one of the seven sound files from each function.</p>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/wow.min.js"></script>
+	<script src="../js/image-resize.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('#myModal').modal({
+				backdrop: 'static',
+				keyboard: false
+			});
+		});
+	</script>
+	
+</body>
+</html>
